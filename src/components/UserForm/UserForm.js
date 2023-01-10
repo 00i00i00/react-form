@@ -7,11 +7,11 @@ const UserForm = () => {
       <form>
         <div className={`${styles["user-form__controls"]}`}>
           <div className={`${styles["user-form__control"]}`}>
-            <label for="username">Username</label>
+            <label htmlFor="username">Username</label>
             <input type="text" id="username" required name="username"></input>
           </div>
           <div className={`${styles["user-form__control"]}`}>
-            <label for="age">Age (Years)</label>
+            <label htmlFor="age">Age (Years)</label>
             <input type="text" id="age" required name="age"></input>
           </div>
           <div className={`${styles["user-form__actions"]}`}>

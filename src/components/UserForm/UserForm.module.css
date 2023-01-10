@@ -1,9 +1,38 @@
 .user-form {
   background-color: white;
+  margin: 24px auto;
+  padding: 16px;
+  border-radius: 12px;
 }
 
 .user-form label {
+  padding-bottom: 4px;
+  font-weight: 700;
 }
 
 .user-form__controls {
+}
+
+.user-form__control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.user-form input {
+  border: 1px solid rgb(193, 191, 191);
+}
+
+.user-form button {
+  width: fit-content;
+  background-color: rgb(40, 195, 164);
+  border: none;
+  padding: 4px 8px;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .user-form {
+    width: 500px;
+  }
 }
