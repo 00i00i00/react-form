@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../UI/Button/Button";
 import styles from "./UserForm.module.css";
 
 const UserForm = (props) => {
@@ -72,9 +73,9 @@ const UserForm = (props) => {
             ></input>
           </div>
           <div className={`${styles["user-form__actions"]}`}>
-            <button type="submit" onClick={submitHandler}>
+            <Button type="submit" onClick={submitHandler}>
               Add User
-            </button>
+            </Button>
           </div>
         </div>
       </form>

@@ -20,14 +20,6 @@
   border: 1px solid rgb(193, 191, 191);
 }
 
-.user-form button {
-  width: fit-content;
-  background-color: rgb(66, 138, 132);
-  border: none;
-  padding: 4px 8px;
-  color: white;
-}
-
 @media (min-width: 768px) {
   .user-form {
     width: 500px;

@@ -1,3 +1,4 @@
+import Button from "../UI/Button/Button";
 import styles from "./ErrorModal.module.css";
 
 const ErrorModal = (props) => {
@@ -17,7 +18,7 @@ const ErrorModal = (props) => {
         <h1>Invalid Input</h1>
         <div className={`${styles["error-modal__modal-inner"]}`}>
           <p>{message}</p>
-          <button onClick={closeModal}>Okay</button>
+          <Button onClick={closeModal}>Okay</Button>
         </div>
       </div>
       <div

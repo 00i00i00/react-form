@@ -6,8 +6,7 @@
   align-items: center;
 }
 
-.error-modal h1,
-.error-modal button {
+.error-modal h1 {
   color: white;
   background-color: rgb(66, 138, 132);
 }
@@ -58,13 +57,6 @@
 .error-modal__modal-inner p {
   padding: 0;
   margin: 0;
-}
-
-.error-modal__modal-inner button {
-  height: fit-content;
-  border: none;
-  padding: 4px 8px;
-  align-self: flex-end;
 }
 
 @media (min-width: 768px) {
