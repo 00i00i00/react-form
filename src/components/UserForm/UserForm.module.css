@@ -10,9 +10,6 @@
   font-weight: 700;
 }
 
-.user-form__controls {
-}
-
 .user-form__control {
   display: flex;
   flex-direction: column;
@@ -25,7 +22,7 @@
 
 .user-form button {
   width: fit-content;
-  background-color: rgb(40, 195, 164);
+  background-color: rgb(66, 138, 132);
   border: none;
   padding: 4px 8px;
   color: white;

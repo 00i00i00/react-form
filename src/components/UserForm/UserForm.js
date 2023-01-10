@@ -2,29 +2,47 @@ import { useState } from "react";
 import styles from "./UserForm.module.css";
 
 const UserForm = (props) => {
-  const [username, setUsername] = useState("");
-  const [age, setAge] = useState("");
+  const [enteredUsername, setEnteredUsername] = useState("");
+  const [enteredAge, setEnteredAge] = useState("");
+
   const nameInputHandler = (event) => {
-    console.log("usernanme input: ", event.target.value);
-    setUsername(event.target.value);
+    setEnteredUsername(event.target.value);
   };
 
   const ageInputHandler = (event) => {
-    console.log("age input: ", event.target.value);
-    setAge(event.target.value);
+    setEnteredAge(event.target.value);
+  };
+
+  const inputValidation = () => {
+    if (
+      enteredUsername.trim().length === 0 ||
+      enteredAge.toString().trim().length === 0
+    ) {
+      props.onFormInvalid("empty");
+      return false;
+    } else if (enteredAge < 0) {
+      props.onFormInvalid("negativeAge");
+      return false;
+    } else {
+      return true;
+    }
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log("SUBMIt HANDLER - username: ", username, "age: ", age);
-    const formData = {
-      id: Math.random().toString(),
-      name: username,
-      age: +age,
-    };
-    props.onFormSubmit(formData);
-    setUsername("");
-    setAge("");
+    const inputIsValid = inputValidation();
+
+    if (inputIsValid) {
+      const formData = {
+        id: Math.random().toString(),
+        name: enteredUsername,
+        age: +enteredAge,
+      };
+
+      props.onFormSubmit(formData);
+    }
+    setEnteredUsername("");
+    setEnteredAge("");
   };
 
   return (
@@ -36,7 +54,7 @@ const UserForm = (props) => {
             <input
               type="text"
               id="username"
-              value={username}
+              value={enteredUsername}
               required
               name="username"
               onChange={nameInputHandler}
@@ -47,7 +65,7 @@ const UserForm = (props) => {
             <input
               type="number"
               id="age"
-              value={age}
+              value={enteredAge}
               required
               name="age"
               onChange={ageInputHandler}
