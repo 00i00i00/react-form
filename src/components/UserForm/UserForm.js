@@ -22,7 +22,7 @@ const UserForm = (props) => {
     ) {
       props.onFormInvalid("empty");
       return false;
-    } else if (enteredAge < 0) {
+    } else if (+enteredAge < 1) {
       props.onFormInvalid("negativeAge");
       return false;
     } else {
