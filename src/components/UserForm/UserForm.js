@@ -42,9 +42,9 @@ const UserForm = (props) => {
       };
 
       props.onFormSubmit(formData);
+      setEnteredUsername("");
+      setEnteredAge("");
     }
-    setEnteredUsername("");
-    setEnteredAge("");
   };
 
   return (
