@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# React Form App
+A project created to implement some of the React fundamentals learned from the [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/) course by Academind.
+
+***
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
