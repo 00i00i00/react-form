@@ -10,7 +10,6 @@ const App = () => {
   const [formErrorType, setFormErrorType] = useState("");
 
   const formSubmissionHandler = (newUser) => {
-    console.log("newUser:", newUser);
     setUsersArr((prevArray) => {
       const updatedArray = [...prevArray];
       updatedArray.unshift(newUser);

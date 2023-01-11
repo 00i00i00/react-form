@@ -6,12 +6,12 @@
   align-items: center;
 }
 
-.error-modal h1 {
+.error-modal h2 {
   color: white;
   background-color: rgb(66, 138, 132);
 }
 
-.error-modal h1 {
+.error-modal h2 {
   color: white;
   background-color: rgb(66, 138, 132);
   font-size: 24px;
@@ -39,11 +39,9 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 95%;
   height: 150px;
-  background-color: white;
   z-index: 1;
-  border-radius: 12px;
+  padding: 0;
 }
 
 .error-modal__modal-inner {
@@ -57,10 +55,4 @@
 .error-modal__modal-inner p {
   padding: 0;
   margin: 0;
-}
-
-@media (min-width: 768px) {
-  .error-modal__modal {
-    width: 532px;
-  }
 }

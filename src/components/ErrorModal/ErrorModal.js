@@ -1,3 +1,4 @@
+import Card from "../UI/Card/Card";
 import Button from "../UI/Button/Button";
 import styles from "./ErrorModal.module.css";
 
@@ -14,13 +15,15 @@ const ErrorModal = (props) => {
 
   return (
     <div className={`${styles["error-modal"]}`}>
-      <div className={`${styles["error-modal__modal"]}`}>
-        <h1>Invalid Input</h1>
+      <Card className={`${styles["error-modal__modal"]}`}>
+        <header>
+          <h2>Invalid Input</h2>
+        </header>
         <div className={`${styles["error-modal__modal-inner"]}`}>
           <p>{message}</p>
           <Button onClick={closeModal}>Okay</Button>
         </div>
-      </div>
+      </Card>
       <div
         className={`${styles["error-modal__overlay"]}`}
         onClick={closeModal}
