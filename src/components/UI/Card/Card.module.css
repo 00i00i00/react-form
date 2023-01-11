@@ -1,0 +1,12 @@
+.card {
+  background: white;
+  margin: 24px auto;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 500px;
+  }
+}
